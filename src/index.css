@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Fireminds styles */
+.font-monument {
+  font-family: 'Arial Black', 'Helvetica', sans-serif;
+  font-weight: 900;
+}
+
+.bg-gradient-tactical {
+  background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #000000 100%);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.mission-card-active {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
+}
+
+/* Custom animation for slow pulse */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
